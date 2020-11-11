@@ -23,9 +23,12 @@
       window.addEventListener("onload", function(event){})
 
       //2. Create an event handler on the window object for the mousemove event
-        window.addEventListener("mousemove", function(event){})
+        window.addEventListener("mousemove", function(event){
 
         //3. Inside of the callback function of this event handler, create offset distances for X and Y from the mouse
+          var mx = event.pageX
+          var my = event.pageY
+        })
     
     //Move the spaceship towards the mouse 
     //4. Get the image element & store it in a variable 

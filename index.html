@@ -19,7 +19,6 @@
 
       //Event handler setup
       //1. Create an event handler on the window object for the load event
-      //document.onload = function() {}
       window.addEventListener("onload", function(event){})
 
       //2. Create an event handler on the window object for the mousemove event
@@ -28,14 +27,16 @@
         //3. Inside of the callback function of this event handler, create offset distances for X and Y from the mouse
           var mx = event.pageX
           var my = event.pageY
-        })
     
-    //Move the spaceship towards the mouse 
-    //4. Get the image element & store it in a variable
-    var spaceship = document.getElementById("spaceship") 
-    //5. move the image by setting the coordinates of left & top refer to slide .  Ex. node.style.left = your coordinates calculation here.  
-    //Note node is the variable name you stored your image element in.
-    //Note the left & top properties track the x & y coordinates respectively & must be set seperately.
+        //Move the spaceship towards the mouse 
+        //4. Get the image element & store it in a variable
+        var spaceship = document.getElementById("spaceship1") 
+        //5. move the image by setting the coordinates of left & top refer to slide .  Ex. node.style.left = your coordinates calculation here.
+        spaceship.style.left = mx
+        spaceship.style.top = my  
+        //Note node is the variable name you stored your image element in.
+        //Note the left & top properties track the x & y coordinates respectively & must be set seperately.
+      })
     
     //Coordinates calculation for left & top properties
     //6. Use the JS built-in function parseInt() to cast your calculation from a float to an int. Refer to https://www.w3schools.com/jsref/jsref_parseint.asp 

@@ -65,6 +65,7 @@
     alien.addEventListener("mouseover", function(event){
 
     //13. Use the target property of the event object to change the coordinates. Ex. event.target.style.left = your coordinates calculation (again refer to steps 8 & 9)
+    /*
     do{
       var x = event.pageX + (Math.random()*600 - 300)
       var y = event.pageY + (Math.random()*600 - 300)
@@ -72,6 +73,9 @@
 
     event.target.style.left = x + "px"
     event.target.style.top = y + "px"
+    */ //while more sensible, I chose to opt out of this more thorough method for moving the alien to better match the outline of the project
+    event.target.style.left = (Math.random()*w) + "px"
+    event.target.style.top = (Math.random()*h) + "px"
     //14. Your coordinates calculation requires the variables created in step 11.
     })
 

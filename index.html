@@ -66,8 +66,9 @@
   var alien = document.getElementById("alien")
 
   //11. Get browser's current width & height to set a horizontal limit for the alien image & store in variables.
-  var w = window.innerWidth
-  var h = window.innerHeight
+  var w = window.innerWidth - 60
+  var h = window.innerHeight - 60
+  //-60 ensures the alien cannot partially leave the screen
 
     //12. Attach an event handler to the alien image for the mouseover event
     alien.addEventListener("mouseover", function(event){

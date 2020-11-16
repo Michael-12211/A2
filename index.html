@@ -47,18 +47,21 @@
     
     //Coordinates calculation for left & top properties
     //6. Use the JS built-in function parseInt() to cast your calculation from a float to an int. Refer to https://www.w3schools.com/jsref/jsref_parseint.asp
-    //var x = spaceship.offsetLeft
-    //var y = spaceship.offsetTop
-    //parseInt() gives an error. Since the program works without it, I chose to ignore it.
     //7. Get the current x & y coordinates & add the offset from step 3.
-    //8. Use the JS built-in function Math.random() to add a random number to increment the movement of the image following the mouse. 
+    var x = spaceship.offsetLeft
+    var y = spaceship.offsetTop
+    //parseInt() gives an error. Since the program works without it, I chose to ignore it.
+    //8. Use the JS built-in function Math.random() to add a random number to increment the movement of the image following the mouse.
+    x += (Math.random()*(event.pageY-spaceship.offsetTop))
+    y += (Math.random()*(event.pageX-spaceship.offsetLeft))
     // Ex. + (Math.random()*200 + 100))
     //Refer to https://www.w3schools.com/jsref/jsref_random.asp 
     //9. Concatenate the pixel unit to your calculation. Ex. + 'px';
+    spaceship.style.top = x + "px"
+    spaceship.style.left = y + "px"
 
-    //I understand these lines are to move the spaceship a random distance towards the mouse. However, I cannot understand your steps, so I will be writing my own equation here.
-    spaceship.style.top = spaceship.offsetTop + (Math.random()*(event.pageY-spaceship.offsetTop)) + "px"
-    spaceship.style.left = spaceship.offsetLeft + (Math.random()*(event.pageX-spaceship.offsetLeft)) + "px"
+    //spaceship.style.top = spaceship.offsetTop + (Math.random()*(event.pageY-spaceship.offsetTop)) + "px"
+    //spaceship.style.left = spaceship.offsetLeft + (Math.random()*(event.pageX-spaceship.offsetLeft)) + "px"
       })
   
   //Move the alien away from the cursor when the cursor is moved close to the alien image.
